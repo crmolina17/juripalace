@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" type="image/ico" href="/images/favicon.ico">
+        <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+        <title>{{ title }}</title>
+    </head>
+    <body>
+
+        <div>
+            Choose your language:
+            <ul>
+                <li>
+                    <a href="/?clang=es">Spanish</a>
+                </li>
+                <li>
+                    <a href="/?clang=en">English</a>
+                </li>
+            </ul>
+        </div>
+
+        {% block body %}{% endblock %}
+
+        {% include 'footer.twig' %}
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function (b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l;
+                b[l] || (b[l] = function () {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+                b[l].l = + new Date;
+                e = o.createElement(i);
+                r = o.getElementsByTagName(i)[0];
+                e.src = 'https://www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+            ga('create', 'UA-XXXXX-X');
+            ga('send', 'pageview');
+        </script>
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="/javascripts/libs/jquery.slim.min.js"></script>
+        <script src="/javascripts/libs/popper.min.js"></script>
+        <script src="/javascripts/libs/bootstrap.min.js"></script>
+        <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <!-- <script src="/javascripts/main.min.js"></script> -->
+        <!-- endbuild -->
+    </body>
+</html>
