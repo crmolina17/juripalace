@@ -57,21 +57,6 @@ module.exports = function (grunt) {
 
 
         copy: {
-            js: {
-                expand: true,
-                cwd: './node_modules',
-                dest: './public/javascripts/libs/',
-                flatten: true,
-                filter: 'isFile',
-                src: [
-                    './bootstrap/dist/js/bootstrap.min.js',
-                    './bootstrap/dist/js/bootstrap.min.js.map',
-                    './popper.js/dist/popper.min.js',
-                    './popper.js/dist/popper.min.js.map',
-                    './jquery/dist/jquery.slim.min.js',
-                    './jquery/dist/jquery.slim.min.map'
-                ]
-            },
             webfonts: {
                 expand: true,
                 cwd: './node_modules',
@@ -106,8 +91,8 @@ module.exports = function (grunt) {
             },
 
             dist: {
-                src: ['js/*.js'],
-                dest: 'js/main.min.js'
+                src: ['dev/js/*.js'],
+                dest: 'public/javascripts/main.js'
             }
         },
 
@@ -158,7 +143,9 @@ module.exports = function (grunt) {
     // Esta tarea se usa para minimizar archivos .JS.
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    // Load the plugin that provides the "concat" task.
+    // Carga el complemento que proporciona la tarea "concat".
+    // Concatena todos los archivos que están presentes en la carpeta src / y 
+    // almacena el archivo .js concatenado en la carpeta dist / .
     grunt.loadNpmTasks('grunt-contrib-concat');
 
     // Carga el complemento que proporciona la tarea "cssmin".
@@ -171,5 +158,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Default task(s).
-    grunt.registerTask('default', ['copy', 'uglify', 'sass', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('default', ['copy', 'concat', 'uglify', 'sass', 'autoprefixer', 'cssmin']);
 };

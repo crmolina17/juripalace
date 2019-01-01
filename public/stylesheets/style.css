@@ -11094,4 +11094,8 @@ body {
 
 .twitter:before {
   content: "\f099"; }
+
+.popover {
+  max-width: 700px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 /*# sourceMappingURL=style.css.map */
