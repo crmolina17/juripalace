@@ -1,4 +1,5 @@
 const sass = require('node-sass');
+const webpackConfig = require('./webpack.config.js');
 
 module.exports = function (grunt) {
 
@@ -66,6 +67,12 @@ module.exports = function (grunt) {
                 src: [
                     './@fortawesome/fontawesome-free/webfonts/*'
                 ]
+            },
+            flags: {
+                expand: true,
+                cwd: './node_modules/flag-icon-css/flags/',
+                dest: './public/stylesheets/flags/',
+                src: '**'
             }
         },
 
@@ -109,6 +116,13 @@ module.exports = function (grunt) {
             }
         },
 
+        webpack: {
+            options: {
+                stats: !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
+            },
+            prod: webpackConfig,
+            dev: Object.assign({ watch: true }, webpackConfig)
+        },
 
         cssmin: {
             my_target: {
@@ -148,7 +162,7 @@ module.exports = function (grunt) {
     // almacena el archivo .js concatenado en la carpeta dist / .
     grunt.loadNpmTasks('grunt-contrib-concat');
 
-    // Carga el complemento que proporciona la tarea "cssmin".
+    // Carga el complemento que proporciona la tarea "autoprefixer".
     // Esta tarea se usa para validar la compativilidad archivos .CSS 
     // con versiones anteriores de los navegadores.
     grunt.loadNpmTasks('grunt-autoprefixer');
@@ -157,6 +171,9 @@ module.exports = function (grunt) {
     // Esta tarea se usa para minimizar archivos .CSS.
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
+    // Load the plugin that provides the "webpack" task.
+    grunt.loadNpmTasks('grunt-webpack');
+
     // Default task(s).
-    grunt.registerTask('default', ['copy', 'concat', 'uglify', 'sass', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('default', ['copy', 'sass', 'autoprefixer', 'cssmin', 'webpack:prod']);
 };

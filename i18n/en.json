@@ -1,4 +1,7 @@
 {
+    "TITLE": "JuriPalace",
     "WELCOME_MSG": "Welcome to ",
-    "CONTACT_TEXT": "More bla"
+    "TELEPHONE_MSG": "Phones: +34 693 733 026 Spain, +33 753 863 523 France",
+    "COPYRIGHT_TEXT": "Copyright © 2018 JuridicalPalace. All rights reserved.",
+    "SHORT_COPYRIGHT_TEXT": "Copyright © 2018 JuridicalPalace"
 }

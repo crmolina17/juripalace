@@ -2,42 +2,10 @@
 <footer class="footer">
     <div class="container-fluid">
         <div class="row">
-            <div class="d-none d-md-block col-md-12 text-right social-links contact-links">
-                <a href="#" data-container="body" data-toggle="popover" data-placement="top" data-html="true" title="Dirección">
-                    <i class="fas fa-map-marker"></i>
-                </a>
-
-                <div id="popover-content1" class="d-none">
-                    <div class="container">
-                        <div class="row">
-                            <div>
-                                <iframe width="400px" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJn6wOs6lZwokRLKy1iqRcoKw" allowfullscreen="allowfullscreen"></iframe>
-                            </div>
-                            &nbsp; &nbsp; &nbsp;
-                            <div>
-                                <h2>Snail mail</h2>
-                                <address>
-                                    <strong>Hythe Window Cleaning</strong><br>
-                                    15 Springfield Way<br>
-                                    Hythe<br>
-                                    Kent<br>
-                                    United Kingdon<br>
-                                    CT21 5SH<br>
-                                    <abbr title="Phone">P:</abbr>
-                                    01234 567 890
-                                </address>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="tel:+584144924918">
-                    <i class="fas fa-phone"></i>
-                </a>
+            <div class="col text-right social-links contact-links">
                 <a href="mailto:juripalace@gmail.com">
                     <i class="fas fa-envelope"></i>
                 </a>
-                &nbsp; &nbsp;
                 <a href="#">
                     <i class="fab fa-facebook-f"></i>
                 </a>
@@ -47,33 +15,21 @@
                 <a href="#">
                     <i class="fab fa-instagram"></i>
                 </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="d-none d-md-block col-md-12 text-right">
+                <span class="telephone">{{translation.TELEPHONE_MSG}}</span>
             </div>
         </div>
 
         <div class="row">
             <div class="d-none d-md-block col-md-12 text-center">
-                <span class="text-muted-center copyright">Copyright © 2018 JuridicalPalace. Todos los derechos reservados.</span>
+                <span class="copyright">{{translation.COPYRIGHT_TEXT}}</span>
             </div>
-        </div>
-
-        <div class="row">
-            <!-- Este texto se genera en resoluciones sn o inferior -->
-            <div class="d-block d-md-none col-sm-12 text-center social-links">
-                <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://twitter.com/juripalace?ref_src=twsrc%5Etfw" target="_blank" data-show-count="false">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Este texto se genera en resoluciones sm o inferior -->
             <div class="d-block d-md-none col-sm-12 text-center">
-                <span class="text-muted-center copyright">Copyright © 2018 JuridicalPalace</span>
+                <span class="copyright">{{translation.SHORT_COPYRIGHT_TEXT}}</span>
             </div>
         </div>
     </div>

@@ -1,10 +1,12 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var session = require('cookie-session');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 var i18n = require("i18n-express");
+var geolang = require("geolang-express");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -26,10 +28,19 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: process.env.SESSION_WORD,
+  maxAge: parseInt(process.env.SESSION_AGE, 10),
+  httpOnly: process.env.SESSION_ONLY_HTTP,
+  keys: ['key1', 'key2']
+}))
+
+app.use(geolang({
+  siteLangs: ["en","es"]
+}));
 
 app.use(i18n({
   translationsPath: path.join(__dirname, 'i18n'), // <--- use here. Specify translations files path.
-  defaultLang: 'es',
   siteLangs: ["en","es"],
   textsVarName: 'translation'
 }));

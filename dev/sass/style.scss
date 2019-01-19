@@ -1,8 +1,13 @@
-@import "custom";
+@import "variables";
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "node_modules/flag-icon-css/sass/flag-icon";
+@import "mixins";
+@import "global";
+@import "navbar";
+@import "lang";
 @import "footer";
 
 .user {
@@ -21,10 +26,4 @@
   &:before {
     content: fa-content($fa-var-twitter);
   }
-}
-
-.popover {
-  max-width: 700px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }

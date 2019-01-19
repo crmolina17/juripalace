@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/i18n/:lang', (req, res) => {
+  req.session.ulang = req.params.lang;
+  res.redirect('back');
+});
+
 module.exports = router;

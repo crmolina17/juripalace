@@ -1,0 +1,24 @@
+.lang {
+    font-size: 0.9em;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+.lang a {
+   -webkit-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    border: 0.05em solid #BBBBBB;
+    padding: 0.5em;
+}
+
+.lang a:hover {
+    text-decoration: inherit;
+}
+
+.lang-active {
+   pointer-events: none;
+   cursor: default;
+   color: #e60d0d;
+}
