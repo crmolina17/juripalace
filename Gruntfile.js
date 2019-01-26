@@ -3,6 +3,10 @@ const webpackConfig = require('./webpack.config.js');
 
 module.exports = function (grunt) {
 
+    // Mostrar el tiempo de ejecución transcurrido de las tareas de grunt.
+    // Este complemento es requerirlo en la parte superior del modulo
+    require('time-grunt')(grunt);
+
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
