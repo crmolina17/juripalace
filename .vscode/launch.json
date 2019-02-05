@@ -6,10 +6,11 @@
     "configurations": [
         
         {
-            "type": "node",
+            "type": "chrome",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/Gruntfile.js"
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }

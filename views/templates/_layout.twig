@@ -8,6 +8,8 @@
         <!-- Custom fonts for this template -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
         <!-- Custom styles for this template -->
         <link rel='stylesheet' href='/stylesheets/style.min.css'/>
@@ -15,16 +17,19 @@
         <title>{{translation.TITLE}}</title>
     </head>
     <body>
-        <!-- Start Header Area -->
-        <h1 class="site-heading text-center text-white d-none d-lg-block">
-            <span class="site-heading-upper text-primary mb-3">A Free Bootstrap 4 Business Theme</span>
-            <span class="site-heading-lower">Business Casual</span>
-        </h1>
-        <!-- End Header Area -->
+        <!-- Navigation -->
+        {% include '/templates/_header.twig' %}
 
-        <!-- Start Navigation Area -->
-        {% block navigation %}{% endblock %}
-        <!-- End Navigation Area -->
+        <!-- Header -->
+        <header class="masthead">
+            <div class="container">
+                <div class="intro-text">
+                    <div class="intro-lead-in">Welcome To Our Studio!</div>
+                    <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                </div>
+            </div>
+        </header>
 
         <div class="lang text-center">
             <a class="{{lang=='es'?'lang-active':''}}" href="/i18n/es">ES</a>
@@ -34,7 +39,7 @@
         {% block body %}{% endblock %}
 
         <!-- Strat Footer Area -->
-        {% include 'footer.twig' %}
+        {% include '/templates/_footer.twig' %}
         <!-- End Footer Area -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

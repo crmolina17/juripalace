@@ -1,4 +1,7 @@
+require('dotenv').config();
+
 var createError = require('http-errors');
+var compression = require('compression');
 var express = require('express');
 var path = require('path');
 var session = require('cookie-session');
@@ -12,6 +15,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+app.use(compression());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,11 +32,11 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(session({
   secret: process.env.SESSION_WORD,
   maxAge: parseInt(process.env.SESSION_AGE, 10),
-  httpOnly: process.env.SESSION_ONLY_HTTP,
-  keys: ['key1', 'key2']
+  httpOnly: process.env.SESSION_ONLY_HTTP
 }))
 
 app.use(geolang({
