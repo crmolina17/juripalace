@@ -29,28 +29,6 @@ h6 {
   @include heading-font;
 }
 
-section {
-  padding: 100px 0;
-  h2.section-heading {
-    font-size: 40px;
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-  h3.section-subheading {
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 75px;
-    text-transform: none;
-    @include serif-font;
-  }
-}
-@media(min-width:768px) {
-  section {
-    padding: 150px 0;
-  }
-}
-
 // Button Styles
 .btn {
   @include heading-font;
@@ -95,4 +73,71 @@ img::selection {
 
 img::-moz-selection {
   background: transparent;
+}
+
+.text-faded {
+  color: fade-out($white, 0.7);
+}
+
+.page-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 100px 0;
+}
+
+@media(min-width:768px) {
+  .page-section {
+    padding: 150px 0;
+  }
+}
+
+.bg-faded {
+  background-color: fade-out($white, 0.15);
+}
+
+.section-heading {
+  text-transform: uppercase;
+  .section-heading-upper {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .section-heading-lower {
+    display: block;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+}
+
+.about-heading {
+  @media (min-width: 992px) {
+    .about-heading-img {
+      position: relative;
+      z-index: 0;
+    }
+    .about-heading-content {
+      margin-top: -5rem;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+// Styling for the team section
+.team-member {
+  margin-bottom: 50px;
+  text-align: center;
+  img {
+    width: 225px;
+    height: 225px;
+    border: 7px solid $white;
+  }
+  h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+  }
+  p {
+    margin-top: 0;
+  }
 }

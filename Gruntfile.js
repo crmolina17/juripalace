@@ -18,7 +18,6 @@ module.exports = function (grunt) {
             }
         },
 
-        
         autoprefixer: {
             dist: {
                 options: {
@@ -29,7 +28,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
 
         imagemin: {
             png: {
@@ -122,7 +120,6 @@ module.exports = function (grunt) {
             }
         },
 
-
         webpack: {
             options: {
                 stats: !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
@@ -130,7 +127,6 @@ module.exports = function (grunt) {
             prod: webpackConfig,
             dev: Object.assign({ watch: true }, webpackConfig)
         },
-
 
         cssmin: {
             my_target: {
