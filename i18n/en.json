@@ -1,7 +1,65 @@
 {
-    "TITLE": "JuridicalPalace",
-    "WELCOME_MSG": "Welcome to ",
-    "TELEPHONE_MSG": "Phones: +34 693 733 026 Spain, +33 753 863 523 France",
-    "COPYRIGHT_TEXT": "Copyright © 2018 JuridicalPalace. All rights reserved.",
-    "SHORT_COPYRIGHT_TEXT": "Copyright © 2018 JuridicalPalace"
+    "_title": "JuridicalPalace",
+    "_welcome": "Welcome!",
+    "msgContacTelephone": "Phones: +34 693 733 026 Spain, +33 753 863 523 France",
+    "msgCopyright": "Copyright © 2018 JuridicalPalace. All rights reserved.",
+    "msgShortCopyright": "Copyright © 2018 JuridicalPalace",
+    "menuItems": {
+        "menu1": {
+            "id": "menu1",
+            "title": "Services",
+            "link": "#services",
+            "parentId": null,
+            "childCount": 0
+        },
+        "menu2": {
+            "id": "menu2",
+            "title": "About",
+            "link": "#about",
+            "parentId": null,
+            "childCount": 0
+        },
+        "menu3": {
+            "id": "menu3",
+            "title": "Team",
+            "link": "#team",
+            "parentId": null,
+            "childCount": 0
+        },
+        "menu4": {
+            "id": "menu4",
+            "title": "Contact",
+            "link": "#contact",
+            "parentId": null,
+            "childCount": 0
+        },
+        "menu5": {
+            "id": "menu5",
+            "title": "Languages",
+            "link": "#",
+            "parentId": null,
+            "childCount": 2
+        },
+        "menu6": {
+            "id": "menu6",
+            "title": "English",
+            "link": "en",
+            "parentId": "menu5",
+            "childCount": 0
+        },
+        "menu7": {
+            "id": "menu7",
+            "title": "Spanish",
+            "link": "es",
+            "parentId": "menu5",
+            "childCount": 0
+        },
+        "menu8": {
+            "id": "menu8",
+            "title": "Login",
+            "link": "#",
+            "parentId": null,
+            "childCount": 0
+        }
+    }
 }

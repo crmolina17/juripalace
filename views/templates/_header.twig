@@ -4,42 +4,39 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="#">{{translation.TITLE}}</a>
+        <a class="navbar-brand" href="#">{{translation._title}}</a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                    <a class="nav-link js-scroll-trigger" href="{{translation.menuItems.menu1.link}}">{{translation.menuItems.menu1.title}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                    <a class="nav-link js-scroll-trigger" href="{{translation.menuItems.menu2.link}}">{{translation.menuItems.menu2.title}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    <a class="nav-link js-scroll-trigger" href="{{translation.menuItems.menu3.link}}">{{translation.menuItems.menu3.title}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    <a class="nav-link js-scroll-trigger" href="{{translation.menuItems.menu4.link}}">{{translation.menuItems.menu4.title}}</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Languages</a>
+                    <a class="nav-link text-uppercase dropdown-toggle" href="{{translation.menuItems.menu5.link}}" id="navbarDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{translation.menuItems.menu5.title}}</a>
                     <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item {{ lang=='en'? 'disabled' : '' }}" href="en">
+                        <a class="dropdown-item {{ lang=='en'? 'disabled' : '' }}" href="{{translation.menuItems.menu6.link}}">
                             <span class="flag-icon flag-icon-us"></span>
-                            English</a>
-                        <a class="dropdown-item {{ lang=='es'? 'disabled' : '' }}" href="es">
+                            {{translation.menuItems.menu6.title}}</a>
+                        <a class="dropdown-item {{ lang=='es'? 'disabled' : '' }}" href="{{translation.menuItems.menu7.link}}">
                             <span class="flag-icon flag-icon-es"></span>
-                            Spanish</a>
+                            {{translation.menuItems.menu7.title}}</a>
                     </div>
                 </li>
             </ul>
         </div>
         <ul class="nav navbar-nav text-uppercase navbar-right">
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">| <i class="fas fa-sign-in-alt fa-fw"></i> Login</a>
+                <a class="nav-link js-scroll-trigger" href="{{translation.menuItems.menu8.link}}">| <i class="fas fa-sign-in-alt fa-fw"></i> {{translation.menuItems.menu8.title}}</a>
             </li>
         </ul>
     </div>

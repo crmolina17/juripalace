@@ -14,7 +14,7 @@ module.exports = {
     },
     devtool: "source-map",
     plugins: [
-        new CleanWebpackPlugin(["public/javascripts/bundle.js"]),
+        new CleanWebpackPlugin(),
         new webpack.ProvidePlugin({
             '$': 'jquery',
             jQuery: 'jquery',
