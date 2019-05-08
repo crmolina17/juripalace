@@ -1,6 +1,14 @@
 {
     "_title": "JuridicalPalace",
     "_welcome": "Welcome!",
+    "_email": "Email",
+    "_password": "Password",
+    "_rememberMe": "Remember Me",
+    "_login": "Login",
+    "_loginWith": "Or login with",
+    "_forgotPassword": "Forgot password?",
+    "_signup": "Sign Up",
+    "msgWelcome": "It's Nice To Meet You",
     "msgContacTelephone": "Phones: +34 693 733 026 Spain, +33 753 863 523 France",
     "msgCopyright": "Copyright © 2018 JuridicalPalace. All rights reserved.",
     "msgShortCopyright": "Copyright © 2018 JuridicalPalace",
@@ -57,7 +65,7 @@
         "menu8": {
             "id": "menu8",
             "title": "Login",
-            "link": "#",
+            "link": "#loginModal",
             "parentId": null,
             "childCount": 0
         }

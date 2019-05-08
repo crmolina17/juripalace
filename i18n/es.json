@@ -1,6 +1,14 @@
 {
     "_title": "JuridicalPalace",
     "_welcome": "¡Bienvenid@!",
+    "_email": "Correo",
+    "_password": "Contraseña",
+    "_rememberMe": "Recordar correo",
+    "_login": "Ingresar",
+    "_loginWith": "O ingresar con",
+    "_forgotPassword": "¿Olvidó su contraseña?",
+    "_signup": "Regístrese",
+    "msgWelcome": "Encantado de conocerte",
     "msgContacTelephone": "Teléfonos: +34 693 733 026 España, +33 753 863 523 Francia",
     "msgCopyright": "Copyright © 2018 JuridicalPalace. Todos los derechos reservados.",
     "msgShortCopyright": "Copyright © 2018 JuridicalPalace",
@@ -57,7 +65,7 @@
         "menu8": {
             "id": "menu8",
             "title": "Ingresar",
-            "link": "#",
+            "link": "#loginModal",
             "parentId": null,
             "childCount": 0
         }

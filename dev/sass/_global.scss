@@ -29,33 +29,6 @@ h6 {
   @include heading-font;
 }
 
-// Button Styles
-.btn {
-  @include heading-font;
-  font-weight: 700;
-}
-
-.btn-xl {
-  font-size: 18px;
-  padding: 20px 40px;
-}
-
-.btn-primary {
-  background-color: $primary;
-  border-color: $primary;
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: darken($primary, 7.5%) !important;
-    border-color: darken($primary, 7.5%) !important;
-    color: white;
-  }
-  &:active,
-  &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
-  }
-}
-
 // Highlight color customization
 ::-moz-selection {
   background: $primary;
@@ -85,7 +58,7 @@ img::-moz-selection {
   padding: 100px 0;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
   .page-section {
     padding: 150px 0;
   }
@@ -102,12 +75,15 @@ img::-moz-selection {
     font-size: 1rem;
     font-weight: 800;
   }
+
   .section-heading-lower {
     display: block;
     font-size: 3rem;
     font-weight: 100;
   }
 }
+
+// Styling for the About section
 
 .about-heading {
   @media (min-width: 992px) {
@@ -139,5 +115,46 @@ img::-moz-selection {
   }
   p {
     margin-top: 0;
+  }
+}
+
+// Styling for the contact section
+section#contact {
+   .form-group {
+    margin-bottom: 25px;
+    input,
+    textarea {
+      padding: 20px;
+    }
+    input.form-control {
+      height: auto;
+    }
+    textarea.form-control {
+      height: 248px;
+    }
+  }
+  .form-control:focus {
+    border-color: $primary;
+    box-shadow: none;
+  }
+  ::-webkit-input-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
+  :-moz-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
+  ::-moz-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
+  :-ms-input-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
   }
 }

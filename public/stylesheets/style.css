@@ -13162,24 +13162,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-family: 'Raleway'; }
 
-.btn {
-  font-family: 'Raleway';
-  font-weight: 700; }
-
-.btn-xl {
-  font-size: 18px;
-  padding: 20px 40px; }
-
-.btn-primary {
-  background-color: #4d869c;
-  border-color: #4d869c; }
-  .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-    background-color: #407082 !important;
-    border-color: #407082 !important;
-    color: white; }
-  .btn-primary:active, .btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important; }
-
 ::-moz-selection {
   background: #4d869c;
   text-shadow: none; }
@@ -13245,6 +13227,40 @@ img::-moz-selection {
     text-transform: none; }
   .team-member p {
     margin-top: 0; }
+
+section#contact .form-group {
+  margin-bottom: 25px; }
+  section#contact .form-group input,
+  section#contact .form-group textarea {
+    padding: 20px; }
+  section#contact .form-group input.form-control {
+    height: auto; }
+  section#contact .form-group textarea.form-control {
+    height: 248px; }
+
+section#contact .form-control:focus {
+  border-color: #4d869c;
+  box-shadow: none; }
+
+section#contact ::-webkit-input-placeholder {
+  font-weight: 700;
+  color: #ced4da;
+  font-family: 'Raleway'; }
+
+section#contact :-moz-placeholder {
+  font-weight: 700;
+  color: #ced4da;
+  font-family: 'Raleway'; }
+
+section#contact ::-moz-placeholder {
+  font-weight: 700;
+  color: #ced4da;
+  font-family: 'Raleway'; }
+
+section#contact :-ms-input-placeholder {
+  font-weight: 700;
+  color: #ced4da;
+  font-family: 'Raleway'; }
 
 #mainNav {
   background-color: #212529; }
@@ -13332,6 +13348,24 @@ header.masthead {
       line-height: 75px;
       margin-bottom: 50px;
       font-family: 'Raleway'; } }
+
+.btn {
+  font-family: 'Raleway';
+  font-weight: 700; }
+
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px; }
+
+.btn-primary {
+  background-color: #4d869c;
+  border-color: #4d869c; }
+  .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #407082 !important;
+    border-color: #407082 !important;
+    color: white; }
+  .btn-primary:active, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important; }
 
 .lang {
   font-size: 0.9em;
@@ -13508,6 +13542,31 @@ Sample:
     text-transform: none;
     color: #e8e167;
     font-family: 'Raleway'; }
+
+/*######################## LOGIN/SIGNUP PAGE START ##################################*/
+.at-login-form .modal-header {
+  padding: 10px 10px;
+  border-bottom: 0px solid #e5e5e5; }
+
+.at-login-form .signup-or-separator {
+  background: none;
+  height: 34px;
+  position: relative;
+  text-align: center; }
+
+.at-login-form .signup-or-separator--text {
+  background-color: #fff;
+  display: inline-block;
+  padding: 8px; }
+
+.at-login-form .h6 {
+  color: #757575;
+  line-height: 1.1;
+  text-rendering: optimizelegibility; }
+
+.at-login-form .signup-or-separator hr {
+  margin: -25px auto 10px;
+  width: 100%; }
 
 .user:before {
   content: "\f007"; }
