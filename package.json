@@ -17,25 +17,36 @@
     "grunt": "grunt"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bcrypt": "^3.0.6",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.4",
     "cookie-session": "^1.3.3",
     "debug": "^4.1.1",
     "dotenv": "^8.0.0",
+    "emailjs": "^2.2.0",
     "express": "^4.16.4",
     "express-sitemap": "^1.8.0",
     "geolang-express": "^1.0.0",
     "http-errors": "^1.7.2",
     "i18n-express": "^1.1.3",
+    "method-override": "^3.0.0",
     "morgan": "^1.9.1",
     "mysql2": "^1.6.5",
     "node-sass-middleware": "^0.11.0",
-    "twig": "^1.13.3"
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-linkedin": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "req-flash": "0.0.3",
+    "twig": "^1.13.3",
+    "validate.js": "^0.12.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.2",
-    "clean-webpack-plugin": "^2.0.2",
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "bootstrap": "^4.3.1",
+    "clean-webpack-plugin": "^2.0.1",
     "exports-loader": "^0.7.0",
     "flag-icon-css": "^3.3.0",
     "grunt": "^1.0.4",
@@ -58,6 +69,11 @@
     "time-grunt": "^2.0.0",
     "tooltip.js": "^1.3.2",
     "uglifyjs-webpack-plugin": "^2.1.2",
-    "webpack": "^4.30.0"
+    "webpack": "^4.31.0"
+  },
+  "main": "app.js",
+  "engines": {
+    "node": "10.10.0",
+    "npm": "6.9.0"
   }
 }
