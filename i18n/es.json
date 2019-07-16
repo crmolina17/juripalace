@@ -1,5 +1,5 @@
 {
-    "_title": "JuridicalPalace",
+    "_title": "BROKERS VAE, SL.",
     "_welcome": "¡Bienvenid@!",
     "_email": "Correo",
     "_password": "Contraseña",
@@ -10,8 +10,8 @@
     "_signup": "Regístrese",
     "msgWelcome": "Encantado de conocerte",
     "msgContacTelephone": "Teléfonos: +34 693 733 026 España, +33 753 863 523 Francia",
-    "msgCopyright": "Copyright © 2018 JuridicalPalace. Todos los derechos reservados.",
-    "msgShortCopyright": "Copyright © 2018 JuridicalPalace",
+    "msgCopyright": "Copyright © 2019 BROKERS VAE, SL. Todos los derechos reservados.",
+    "msgShortCopyright": "Copyright © 2019 BROKERS VAE, SL.",
     "menuItems": {
         "menu1": {
             "id": "menu1",
@@ -68,6 +68,13 @@
             "link": "#loginModal",
             "parentId": null,
             "childCount": 0
+        }
+    },
+    "sectionItems": {
+        "section2": {
+            "title": "Acerca de",
+            "subtitle": "¿QUIÉNES SOMOS?",
+            "msgSection": "Brokers VAE, somos una sociedad con orígenes en Venezuela, Argentina y España (VAE) domiciliada en la hermosa y cálida ciudad de Barcelona, España, constituida por una red propia de profesionales resilientes en quien poder confiar, que nace como una sociedad de promoción, gestión e intermediación comercial de productos y servicios dentro del sector inmobiliario, de seguros y jurídico.</br></br>Desde nuestros inicios Brokers VAE, se ha ido transformando en una persona jurídica con identidad propia, donde se materializan los principios y valores que la han convertido en una importante sociedad de nuestro país (trabajo en equipo, innovación y atención al cliente). Un esfuerzo común para ofrecer a nuestros clientes algo sin lo cual difícilmente se puede afrontar la vida en la actualidad, la seguridad y lealtad."
         }
     }
 }
