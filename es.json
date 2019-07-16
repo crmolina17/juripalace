@@ -1,0 +1,80 @@
+{
+    "_title": "BROKERS VAE, SL.",
+    "_welcome": "¡Bienvenid@!",
+    "_email": "Correo",
+    "_password": "Contraseña",
+    "_rememberMe": "Recordar correo",
+    "_login": "Ingresar",
+    "_loginWith": "O ingresar con",
+    "_forgotPassword": "¿Olvidó su contraseña?",
+    "_signup": "Regístrese",
+    "msgWelcome": "Encantado de conocerte",
+    "msgContacTelephone": "Teléfonos: +34 693 733 026 España, +33 753 863 523 Francia",
+    "msgCopyright": "Copyright © 2019 BROKERS VAE, SL. Todos los derechos reservados.",
+    "msgShortCopyright": "Copyright © 2019 BROKERS VAE, SL.",
+    "menuItems": {
+        "menu1": {
+            "id": "menu1",
+            "title": "Servicios",
+            "link": "#services",
+            "parentId": null,
+            "childCount": 0
+        },
+        "menu2": {
+            "id": "menu2",
+            "title": "Acerca de",
+            "link": "#about",
+            "parentId": null,
+            "childCount": 0
+        },
+        "menu3": {
+            "id": "menu3",
+            "title": "Equipo",
+            "link": "#team",
+            "parentId": null,
+            "childCount": 0
+        },
+        "menu4": {
+            "id": "menu4",
+            "title": "Contacto",
+            "link": "#contact",
+            "parentId": null,
+            "childCount": 0
+        },
+        "menu5": {
+            "id": "menu5",
+            "title": "Idiomas",
+            "link": "#",
+            "parentId": null,
+            "childCount": 2
+        },
+        "menu6": {
+            "id": "menu6",
+            "title": "Ingles",
+            "link": "en",
+            "parentId": "menu5",
+            "childCount": 0
+        },
+        "menu7": {
+            "id": "menu7",
+            "title": "Español",
+            "link": "es",
+            "parentId": "menu5",
+            "childCount": 0
+        },
+        "menu8": {
+            "id": "menu8",
+            "title": "Ingresar",
+            "link": "#loginModal",
+            "parentId": null,
+            "childCount": 0
+        }
+    },
+    "sectionItems": {
+        "section2": {
+            "title": "Acerca de",
+            "subtitle": "¿QUIÉNES SOMOS?",
+            "msgSection": "Brokers VAE, somos una sociedad con orígenes en Venezuela, Argentina y España (VAE) domiciliada en la hermosa y cálida ciudad de Barcelona, España, constituida por una red propia de profesionales resilientes en quien poder confiar, que nace como una sociedad de promoción, gestión e intermediación comercial de productos y servicios dentro del sector inmobiliario, de seguros y jurídico.</br></br>Desde nuestros inicios Brokers VAE, se ha ido transformando en una persona jurídica con identidad propia, donde se materializan los principios y valores que la han convertido en una importante sociedad de nuestro país (trabajo en equipo, innovación y atención al cliente). Un esfuerzo común para ofrecer a nuestros clientes algo sin lo cual difícilmente se puede afrontar la vida en la actualidad, la seguridad y lealtad."
+        }
+    }
+}
