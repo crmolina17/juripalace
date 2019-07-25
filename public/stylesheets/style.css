@@ -13357,7 +13357,7 @@ section#contact :-ms-input-placeholder {
     padding-bottom: 25px;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: transparent; }
+    background-color: rgba(0, 0, 0, 0.4); }
     #mainNav .navbar-brand {
       font-size: 1.75em;
       transition: all 0.3s; }
@@ -13366,8 +13366,9 @@ section#contact :-ms-input-placeholder {
     #mainNav.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: #212529; }
-      #mainNav.navbar-shrink .navbar-brand {
+      background-color: #212529;
+      box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4); }
+      #mainNav.navbar-shrink Copiar texto .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0; } }
 
