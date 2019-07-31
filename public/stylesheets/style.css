@@ -7516,7 +7516,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 /*!
- * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.10.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
@@ -7524,6 +7524,7 @@ a.text-dark:hover, a.text-dark:focus {
 .user,
 .far,
 .fal,
+.fad,
 .fab,
 .twitter {
   -moz-osx-font-smoothing: grayscale;
@@ -8600,6 +8601,9 @@ readers do not read off random characters that represent icons */
 
 .fa-copyright:before {
   content: "\f1f9"; }
+
+.fa-cotton-bureau:before {
+  content: "\f89e"; }
 
 .fa-couch:before {
   content: "\f4b8"; }
@@ -11872,7 +11876,7 @@ readers do not read off random characters that represent icons */
   width: auto; }
 
 /*!
- * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.10.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -11890,7 +11894,7 @@ readers do not read off random characters that represent icons */
   font-weight: 900; }
 
 /*!
- * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.10.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -13368,7 +13372,7 @@ section#contact :-ms-input-placeholder {
       padding-bottom: 0;
       background-color: #212529;
       box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4); }
-      #mainNav.navbar-shrink Copiar texto .navbar-brand {
+      #mainNav.navbar-shrink .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0; } }
 
