@@ -13330,15 +13330,13 @@ section#contact :-ms-input-placeholder {
   font-family: 'Raleway'; }
 
 #mainNav {
-  background-color: #212529; }
+  background-color: #212529;
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4); }
   #mainNav .navbar-toggler {
-    font-size: 12px;
     right: 0;
     padding: 13px;
-    text-transform: uppercase;
     color: white;
     border: 0;
-    background-color: #4d869c;
     font-family: 'Raleway'; }
   #mainNav .navbar-brand {
     color: #4d869c;
