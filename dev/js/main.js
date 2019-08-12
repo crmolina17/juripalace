@@ -50,3 +50,10 @@ import 'bootstrap';
   })
 
 })(jQuery); // End of use strict
+
+
+$(document).ready(function(){
+	$('#nav-icon3').click(function(){
+		$(this).toggleClass('open');
+	});
+});
