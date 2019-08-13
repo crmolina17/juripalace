@@ -1,4 +1,5 @@
 import 'bootstrap';
+import 'jquery.easing/jquery.easing.js'
 
 (function($) {
   "use strict"; // Start of use strict
@@ -50,10 +51,3 @@ import 'bootstrap';
   })
 
 })(jQuery); // End of use strict
-
-
-$(document).ready(function(){
-	$('#nav-icon3').click(function(){
-		$(this).toggleClass('open');
-	});
-});
