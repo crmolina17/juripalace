@@ -32,11 +32,20 @@
                 </li>
             </ul>
         </div>
-        <ul class="nav navbar-nav text-uppercase navbar-right">
+        
+        <!-- Solo visible para escritorio -->
+        <ul class="nav navbar-nav text-uppercase navbar-right d-none d-sm-none d-md-block">
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="{{translation.menuItems.menu8.link}}">|
                     <i class="fas fa-sign-in-alt fa-fw"></i>
                     {{translation.menuItems.menu8.title}}</a>
+            </li>
+        </ul>
+
+        <!-- Solo visible para smartphone -->
+        <ul class="nav navbar-nav text-uppercase navbar-right d-block d-sm-block d-md-none">
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="{{translation.menuItems.menu8.link}}">{{translation.menuItems.menu8.title}}</a>
             </li>
         </ul>
     </div>
