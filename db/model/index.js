@@ -5,9 +5,12 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../db.js')[env];
+const config = require(__dirname + '/../config.js')[env];
 const db = {};
 
+/**
+ * Crear nuevo objeto Sequelize.
+ */
 let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
@@ -15,6 +18,9 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
+/**
+ * Añadir módulos de archivos a objeto db.
+ */
 fs
   .readdirSync(__dirname)
   .filter(file => {
@@ -31,6 +37,9 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+/**
+ * Añadir objetos Squelize a db objeto.
+ */
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
