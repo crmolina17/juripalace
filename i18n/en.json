@@ -1,9 +1,10 @@
 {
     "_title": "BROKERS VAE, SL.",
     "_welcome": "Welcome!",
+    "_createAccount": "Create Account",
     "_email": "Email",
     "_password": "Password",
-    "_rememberMe": "Remember Me",
+    "_username": "Username",
     "_login": "Login",
     "_loginWith": "Or login with",
     "_forgotPassword": "Forgot password?",
