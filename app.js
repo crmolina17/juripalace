@@ -10,7 +10,12 @@ require('dotenv').config();
  * Add more modules that dependent of config.
  */
 PER.config = require('./config');
+PER.helper = require('./util/helper');
+PER.emailjs = require('./util/emailjs');
+PER.validate = require('./util/validate');
+PER.model = require('./db/model');
 PER.log = require('./util/winston');
+
 
 /**
  * Require modules.
