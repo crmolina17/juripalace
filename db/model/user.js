@@ -43,33 +43,33 @@ module.exports = sequelize => {
     const User = sequelize.define('user', {
         id: {type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
         email: {type: Sequelize.STRING},
-        username: {type: Sequelize.STRING(PER.const.DB.SIZE_TEXT_LARGE)},
-        password: {type: Sequelize.STRING(PER.const.DB.SIZE_TEXT_LARGE)},
+        username: {type: Sequelize.STRING(PER.config.DB.SIZE_TEXT_LARGE)},
+        password: {type: Sequelize.STRING(PER.config.DB.SIZE_TEXT_LARGE)},
         password_reset_token: {type: Sequelize.STRING},
         password_reset_expires: {type: Sequelize.DATE},
         is_username_tmp: {type: Sequelize.BOOLEAN, defaultValue: false},
         firstname: {type: Sequelize.STRING},
         lastname: {type: Sequelize.STRING},
-        gender: {type: Sequelize.INTEGER, defaultValue: PER.const.DB.GENDER_NONE},
+        gender: {type: Sequelize.INTEGER, defaultValue: PER.config.DB.GENDER_NONE},
         date_birth: {type: Sequelize.DATEONLY},
-        phone_home: {type: Sequelize.STRING(PER.const.DB.SIZE_TEXT_MEDIUM)},
-        phone_mobile: {type: Sequelize.STRING(PER.const.DB.SIZE_TEXT_MEDIUM)},
+        phone_home: {type: Sequelize.STRING(PER.config.DB.SIZE_TEXT_MEDIUM)},
+        phone_mobile: {type: Sequelize.STRING(PER.config.DB.SIZE_TEXT_MEDIUM)},
         address: {type: Sequelize.STRING},
         state: {type: Sequelize.STRING},
         city: {type: Sequelize.STRING},
-        post_code: {type: Sequelize.STRING(PER.const.DB.SIZE_TEXT_SMALL)},
-        country: {type: Sequelize.CHAR(PER.const.DB.SIZE_CHAR_TWO)},
+        post_code: {type: Sequelize.STRING(PER.config.DB.SIZE_TEXT_SMALL)},
+        country: {type: Sequelize.CHAR(PER.config.DB.SIZE_CHAR_TWO)},
         activation_token: {type: Sequelize.STRING},
         activation_expires: {type: Sequelize.DATE},
-        type: {type: Sequelize.INTEGER, defaultValue: PER.const.DB.USER_TYPE_USER},
-        status: {type: Sequelize.INTEGER, defaultValue: PER.const.DB.STATUS_INACTIVE},
-        provider_type: {type: Sequelize.INTEGER, defaultValue: PER.const.PROVIDER_WEB},
+        type: {type: Sequelize.INTEGER, defaultValue: PER.config.DB.USER_TYPE_USER},
+        status: {type: Sequelize.INTEGER, defaultValue: PER.config.DB.STATUS_INACTIVE},
+        provider_type: {type: Sequelize.INTEGER, defaultValue: PER.config.PROVIDER_WEB},
         provider_id: {type: Sequelize.STRING},
-        provider_token: {type: Sequelize.STRING(PER.const.DB.SIZE_TEXT_BIG)},
+        provider_token: {type: Sequelize.STRING(PER.config.DB.SIZE_TEXT_BIG)},
         newsletter: {type: Sequelize.BOOLEAN, defaultValue: false},
-        remember_token: {type: Sequelize.STRING(PER.const.DB.SIZE_TEXT_LARGE)},
+        remember_token: {type: Sequelize.STRING(PER.config.DB.SIZE_TEXT_LARGE)},
         last_date_login: {type: Sequelize.DATE},
-        last_ip_login: {type: Sequelize.STRING(PER.const.DB.SIZE_TEXT_MEDIUM)}
+        last_ip_login: {type: Sequelize.STRING(PER.config.DB.SIZE_TEXT_MEDIUM)}
     }, {
         comment:
             'is_username_tmp: [0: False, 1: True], ' +
@@ -86,7 +86,7 @@ module.exports = sequelize => {
      * @return {User} The user for create.
      */
     User.beforeCreate(user => {
-        if (user.provider_type === PER.const.PROVIDER_WEB) {
+        if (user.provider_type === PER.config.PROVIDER_WEB) {
             // For sign ups user in the website's form
             return user.validateInternalUser();
         }
@@ -123,7 +123,7 @@ module.exports = sequelize => {
                 return User.findByField('email', this.email)
                     .then(userFound => {
                         if (userFound) {
-                            if (userFound.status === PER.const.DB.STATUS_INACTIVE) {
+                            if (userFound.status === PER.config.DB.STATUS_INACTIVE) {
                                 // Exists an pending account for activate
                                 throw new Error('errPendingActivateAccount');
                             } else {
@@ -179,7 +179,7 @@ module.exports = sequelize => {
         };
 
         if (onlyActive) {
-            where.status = PER.const.DB.STATUS_ACTIVE;
+            where.status = PER.config.DB.STATUS_ACTIVE;
         }
 
         return User
@@ -195,7 +195,7 @@ module.exports = sequelize => {
      * @return {User} The user modified.
      */
     User.prototype.setInitUserInternal = function() {
-        this.status = PER.const.DB.STATUS_INACTIVE;
+        this.status = PER.config.DB.STATUS_INACTIVE;
         this.activation_token = PER.helper.getToken();
         this.activation_expires = PER.helper.getTokenExpires();
         return this.setPassword();
@@ -208,7 +208,7 @@ module.exports = sequelize => {
      * @return {User} The user modified.
      */
     User.prototype.setInitUserExternal = function() {
-        this.status = PER.const.DB.STATUS_ACTIVE;
+        this.status = PER.config.DB.STATUS_ACTIVE;
         return this.setUsername();
     };
 
@@ -262,9 +262,9 @@ module.exports = sequelize => {
         return User
             .findOne({where: {
                 email: email,
-                type: PER.const.DB.USER_TYPE_USER,
-                status: PER.const.DB.STATUS_ACTIVE,
-                provider_type: PER.const.PROVIDER_WEB,
+                type: PER.config.DB.USER_TYPE_USER,
+                status: PER.config.DB.STATUS_ACTIVE,
+                provider_type: PER.config.PROVIDER_WEB,
                 deleted: null
             }})
             .then(user => {
@@ -277,7 +277,7 @@ module.exports = sequelize => {
             })
             .catch(err => {
                 PER.log.error(err.message);
-                if (err.message.slice(0, PER.const.LIMIT_MSG_ERROR) === 'err') {
+                if (err.message.slice(0, PER.config.LIMIT_MSG_ERROR) === 'err') {
                     throw err;
                 } else {
                     throw new Error('errInternalOperation');
@@ -316,10 +316,10 @@ module.exports = sequelize => {
     /**
      * Get field names for token data.
      * @function getFieldNamesToken
-     * @param {integer} tokenType - Token type: [PER.const.PASSWORD_RESET, PER.const.ACTIVATION].
+     * @param {integer} tokenType - Token type: [PER.config.PASSWORD_RESET, PER.config.ACTIVATION].
      * @return {string | string} Field names for token data.
      * @example
-     * getFieldNamesToken(PER.const.TOKEN.PASSWORD_RESET);
+     * getFieldNamesToken(PER.config.TOKEN.PASSWORD_RESET);
      * // returns {'password_reset_token', 'password_reset_expires'}
      */
     User.getFieldNamesToken = function(tokenType) {
@@ -327,11 +327,11 @@ module.exports = sequelize => {
         let expiresField = '';
 
         switch (tokenType) {
-            case PER.const.TOKEN.PASSWORD_RESET:
+            case PER.config.TOKEN.PASSWORD_RESET:
                 tokenField = 'password_reset_token';
                 expiresField = 'password_reset_expires';
                 break;
-            // For case PER.const.TOKEN.ACTIVATION:
+            // For case PER.config.TOKEN.ACTIVATION:
             default:
                 tokenField = 'activation_token';
                 expiresField = 'activation_expires';
@@ -352,7 +352,7 @@ module.exports = sequelize => {
      * @throws errTokenExpires: Token expires or invalid.
      */
     User.resetPassword = function(token, email, password) {
-        return User.findTokenOwner(token, email, PER.const.TOKEN.PASSWORD_RESET)
+        return User.findTokenOwner(token, email, PER.config.TOKEN.PASSWORD_RESET)
             .then(user => {
                 if (user) {
                     return user
@@ -379,12 +379,12 @@ module.exports = sequelize => {
      * @throws errTokenExpires: Token expires or invalid.
      */
     User.activateAccount = function(token, email) {
-        return User.findTokenOwner(token, email, PER.const.TOKEN.ACTIVATION, false)
+        return User.findTokenOwner(token, email, PER.config.TOKEN.ACTIVATION, false)
             .then(user => {
                 if (user) {
                     return user
                         .update({
-                            status: PER.const.DB.STATUS_ACTIVE,
+                            status: PER.config.DB.STATUS_ACTIVE,
                             activation_token: null,
                             activation_expires: null
                         })
@@ -403,7 +403,7 @@ module.exports = sequelize => {
      * @function findTokenOwner
      * @param {string} token - Token.
      * @param {string} email - Email address.
-     * @param {integer} tokenType - Token type: [PER.const.PASSWORD_RESET, PER.const.ACTIVATION].
+     * @param {integer} tokenType - Token type: [PER.config.PASSWORD_RESET, PER.config.ACTIVATION].
      * @param {boolean} [onlyActive=true] - If search only active users.
      * @return {User} The token's owner user.
      */
@@ -415,7 +415,7 @@ module.exports = sequelize => {
                 email: email,
                 [tokenField]: token,
                 [expiresField]: {[op.gt]: Date.now()},
-                status: onlyActive ? PER.const.DB.STATUS_ACTIVE : PER.const.DB.STATUS_INACTIVE
+                status: onlyActive ? PER.config.DB.STATUS_ACTIVE : PER.config.DB.STATUS_INACTIVE
             }})
             .then(user => {
                 if (user) {
@@ -437,7 +437,7 @@ module.exports = sequelize => {
         return this.email;
     };
 
-    if (PER.config.env.name === PER.const.ENV.DEVELOPMENT) {
+    if (PER.config.env.name === PER.config.ENV.DEVELOPMENT) {
         User.sync({force: true});
     }
 
