@@ -5,9 +5,19 @@ var router = express.Router();
 /* GET home page. */ 
 router.get('/', function (req, res, next) {
   res.header('Cache-Control', 'no-cache, no-store, must-revalidate');
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 
+/*
+ * login
+*/ 
+router.get('/login', PER.helper.noCacheRoute, PER.helper.isAuthenticated, (req, res) => {
+    res.render('visitor/login');
+});
+
+/*
+ * Handle language change.
+ */
 router.get('/:lang', (req, res) => {
   req.session.ulang = req.params.lang;
   res.redirect('back');
