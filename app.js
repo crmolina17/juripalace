@@ -11,9 +11,9 @@ require('dotenv').config();
  */
 PER.config = require('./config');
 PER.helper = require('./util/helper');
-PER.emailjs = require('./util/emailjs');
+/** PER.emailjs = require('./util/emailjs'); */
 PER.validate = require('./util/validate');
-PER.model = require('./db/model');
+/** PER.model = require('./db/model'); */
 PER.log = require('./util/winston');
 
 
