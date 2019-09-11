@@ -1,5 +1,7 @@
 import 'bootstrap';
-import 'jquery.easing/jquery.easing.js'
+import 'jquery.easing/jquery.easing.js';
+import 'slick-carousel/slick/slick.js';
+import './carousel.js'
 
 (function($) {
   "use strict"; // Start of use strict

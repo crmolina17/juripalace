@@ -3,6 +3,7 @@
 @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "node_modules/slick-carousel/slick/slick.scss";
 @import "node_modules/flag-icon-css/sass/flag-icon";
 @import "mixins";
 @import "global";
@@ -12,6 +13,7 @@
 @import "social-button";
 @import "footer";
 @import "login";
+@import "carousel";
 
 .user {
   @extend %fa-icon;
