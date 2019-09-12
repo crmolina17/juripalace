@@ -127,12 +127,14 @@ $(function () {
 
   //start the slider
   slideWrapper.slick({
-    // fade:true,
-    autoplaySpeed: 4000,
+    //fade:true,
+    autoplay: true,
+    autoplaySpeed: 8000,
     lazyLoad: "progressive",
     speed: 600,
     arrows: false,
     dots: true,
+    mobileFirst: true,
     cssEase: "cubic-bezier(0.87, 0.03, 0.41, 0.9)"
   });
 });
