@@ -25,6 +25,7 @@ $link_hover_color: #fff;
 
 .main-slider {
     position: relative;
+    max-width: 100%;
     width: 100%;
     height: 38vw;
     min-height: 8vw;
@@ -128,7 +129,7 @@ $link_hover_color: #fff;
     border: 3px solid;
     color: #fff;
     margin: 0;
-    font-size: 40px;
+    font-size: 1.5em;
     font-weight: bold;
     letter-spacing: .02em;
     opacity: 0;
