@@ -13470,7 +13470,6 @@ section#contact :-ms-input-placeholder {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../images/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -13760,7 +13759,6 @@ Sample:
   position: relative;
   height: 38vw; }
   .slick-slide::before {
-    background-color: #000;
     opacity: .3;
     z-index: 1; }
   .slick-slide video {
@@ -13809,7 +13807,7 @@ Sample:
 
 .caption {
   position: absolute;
-  top: 44%;
+  top: 30%;
   left: 5%;
   text-align: center;
   padding: 20px;
@@ -13827,8 +13825,6 @@ Sample:
 .slick-dots {
   text-align: center;
   padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: #2d3042;
   line-height: 0; }
   .slick-dots li {
     display: inline-block;
@@ -13843,8 +13839,8 @@ Sample:
       border: 2px solid #fff;
       box-shadow: 0 0 0 0 transparent;
       vertical-align: middle;
-      color: #fff;
-      background-color: #fff;
+      color: #2d3042;
+      background-color: #2d3042;
       transition: all .3s ease;
       opacity: .4; }
       .slick-dots li button:focus {
