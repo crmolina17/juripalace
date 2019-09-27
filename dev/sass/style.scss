@@ -16,19 +16,19 @@
 @import "carousel";
 
 .user {
-  @extend %fa-icon;
-  @extend .fas;
+    @extend %fa-icon;
+    @extend .fas;
 
-  &:before {
-    content: fa-content($fa-var-user);
-  }
+    &:before {
+        content: fa-content($fa-var-user);
+    }
 }
 
 .twitter {
-  @extend %fa-icon;
-  @extend .fab;
+    @extend %fa-icon;
+    @extend .fab;
 
-  &:before {
-    content: fa-content($fa-var-twitter);
-  }
+    &:before {
+        content: fa-content($fa-var-twitter);
+    }
 }

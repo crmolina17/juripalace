@@ -27,7 +27,7 @@ $link_hover_color: #fff;
     position: relative;
     width: 100%;
     max-width: 100%;
-    height: 38vw;
+    height: auto;
     //min-height: 19vw;
     margin-bottom: 50px;
     opacity: 0;
@@ -42,7 +42,7 @@ $link_hover_color: #fff;
 
 .slick-slide {
     position: relative;
-    height: 38vw;
+    height: 90vh;
     @extend %bv_hidden;
 
     &::before {
