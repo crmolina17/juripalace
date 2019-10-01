@@ -42,7 +42,7 @@ $link_hover_color: #fff;
 
 .slick-slide {
     position: relative;
-    height: 90vh;
+    height: 85vh;
     @extend %bv_hidden;
 
     &::before {

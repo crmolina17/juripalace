@@ -128,6 +128,18 @@ module.exports = function (grunt) {
             dev: Object.assign({ watch: true }, webpackConfig)
         },
 
+
+        uncss: {
+            dist: {
+                files: [{
+                    nonull: true,
+                    src: ['http://localhost:3000/'],
+                    dest: './public/stylesheets/tidy.css'
+                }]
+            }
+        },
+
+
         cssmin: {
             my_target: {
                 files: [{
@@ -177,6 +189,9 @@ module.exports = function (grunt) {
 
     // Carga el complemento que proporciona la tarea "webpack".
     grunt.loadNpmTasks('grunt-webpack');
+
+    // Carga el complemento que proporciona la tarea "uncss".
+    grunt.loadNpmTasks('grunt-uncss');
 
     // Default task(s).
     grunt.registerTask('default', ['copy', 'sass', 'autoprefixer', 'cssmin', 'webpack:prod']);

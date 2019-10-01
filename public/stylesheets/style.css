@@ -13784,7 +13784,7 @@ Sample:
 
 .slick-slide {
   position: relative;
-  height: 90vh; }
+  height: 85vh; }
   .slick-slide::before {
     opacity: .3;
     z-index: 1; }
