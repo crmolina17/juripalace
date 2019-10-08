@@ -131,6 +131,9 @@ module.exports = function (grunt) {
 
         uncss: {
             dist: {
+                options: {
+                    htmlroot: 'public'
+                }, 
                 files: [{
                     nonull: true,
                     src: ['http://localhost:3000/'],
