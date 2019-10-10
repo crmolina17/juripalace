@@ -129,7 +129,7 @@ $(function () {
     slideWrapper.slick({
         //fade:true,
         autoplay: true,
-        autoplaySpeed: 8000,
+        autoplaySpeed: 14000,
         lazyLoad: "progressive",
         speed: 600,
         arrows: false,
