@@ -1,5 +1,140 @@
 {% extends '/templates/_layout.twig' %}
 
 {% block body %}
+    <!-- Login Modal -->
+    <section
+        class="at-login-form">
+        <!-- MODAL LOGIN -->
+        <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="loginModal" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div
+                    class="modal-content">
+                    <!-- MODAL HEADER -->
+                    <div class="modal-header">
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- MODAL BODY -->
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmaillog" placeholder="{{translation._email}}">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="exampleInputPasswordpas" placeholder="{{translation._password}}">
+                            </div>
+                            <br>
+                            <button class="btn btn-primary btn-block" type="submit">{{translation._login}}</button>
+                        </form>
+                        <br>
+                        <div class="signup-or-separator">
+                            <span class="h6 signup-or-separator--text">{{translation._loginWith}}</span>
+                            <hr>
+                        </div>
+                        <div class="max-auto text-center clearfix mt-3">
+                            <a href="/auth/facebook">
+                                <span class="scl-btn scl-rnd shadow fab fa-facebook-f"></span>
+                            </a>
+                            <a href="/auth/google">
+                                <span class="scl-btn scl-rnd shadow fab fa-google"></span>
+                            </a>
+                            <a href="/auth/twitter">
+                                <span class="scl-btn scl-rnd shadow fab fa-twitter"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- MODAL FOOTER -->
+                    <div class="modal-footer">
+                        <div class="col-md-6">
+                            <a class="float-left" data-dismiss="modal" data-target="#forgotPassword" data-toggle="modal" href="#">
+                                {{translation._forgotPassword}}</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="float-right" data-dismiss="modal" data-target="#signupModal" data-toggle="modal" href="#">
+                                {{translation._signup}}</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </section>
 
+    <!-- signup Modal -->
+    <section
+        class="at-login-form">
+        <!-- MODAL SIGNUP -->
+        <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="signupModal" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div
+                    class="modal-content">
+                    <!-- MODAL HEADER -->
+                    <div class="modal-header">
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- MODAL BODY -->
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="username" placeholder="{{translation._username}}">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="{{translation._email}}">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="{{translation._password}}">
+                            </div>
+                            <br>
+                            <button class="btn btn-primary btn-block" id="send" type="submit">{{translation._createAccount}}</button>
+                        </form>
+                        <br>
+                        <div class="signup-or-separator">
+                            <span class="h6 signup-or-separator--text">{{translation._loginWith}}</span>
+                            <hr>
+                        </div>
+                        <div class="max-auto text-center clearfix mt-3">
+                            <a href="/auth/facebook">
+                                <span class="scl-btn scl-rnd shadow fab fa-facebook-f"></span>
+                            </a>
+                            <a href="/auth/google">
+                                <span class="scl-btn scl-rnd shadow fab fa-google"></span>
+                            </a>
+                            <a href="/auth/twitter">
+                                <span class="scl-btn scl-rnd shadow fab fa-twitter"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- MODAL FOOTER -->
+                    <div class="modal-footer">
+                        <div class="col-md-6">
+                            <a class="float-left" data-dismiss="modal" data-target="#forgotPassword" data-toggle="modal" href="#">
+                                {{translation._forgotPassword}}</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="float-right" data-dismiss="modal" data-target="#loginModal" data-toggle="modal" href="#">
+                                {{translation._login}}</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </section>
+
+    <script>
+        $('#username').focus();
+        $('#send').prop('disabled', true);
+
+        $('#username, #email, #password').keyup(function () {
+            var isDisabled = ($('#username').val() == '' || $('#password').val() == '' || $('#email').val() == '');
+            $('#send').prop('disabled', isDisabled);
+        });
+    </script>
 {% endblock %}
