@@ -23,7 +23,7 @@
         },
         "menu2": {
             "id": "menu2",
-            "title": "Acerca de",
+            "title": "Acerca&nbsp;de",
             "link": "#about",
             "parentId": null,
             "childCount": 0
