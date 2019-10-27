@@ -13479,7 +13479,8 @@ section#contact :-ms-input-placeholder {
     padding-bottom: 25px;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: rgba(0, 0, 0, 0.4); }
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: none; }
     #mainNav .navbar-brand {
       font-size: 1.75em;
       transition: all 0.3s; }

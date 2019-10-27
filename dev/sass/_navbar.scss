@@ -4,6 +4,7 @@
   -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4);
+
   .navbar-toggler {
     right: 0;
     padding: 14px;
@@ -14,36 +15,36 @@
   }
 
   .icon-bar {
-    width: 22px; 
+    width: 22px;
     height: 2px;
     background-color: #B6B6B6;
     display: block;
     transition: all 0.2s;
     margin-top: 4px
   }
-  
+
   .navbar-toggler .top-bar {
     transform: translate(3px) rotate(45deg);
     transform-origin: 10% 10%;
   }
-   
+
   .navbar-toggler .middle-bar {
     opacity: 0;
   }
-   
+
   .navbar-toggler .bottom-bar {
     transform: translate(3px) rotate(-45deg);
     transform-origin: 10% 90%;
   }
-   
+
   .navbar-toggler.collapsed .top-bar {
     transform: rotate(0);
   }
-   
+
   .navbar-toggler.collapsed .middle-bar {
     opacity: 1;
   }
-   
+
   .navbar-toggler.collapsed .bottom-bar {
     transform: rotate(0);
   }
@@ -51,6 +52,7 @@
   .navbar-brand {
     color: $primary;
     @include script-font;
+
     &.active,
     &:active,
     &:focus,
@@ -58,6 +60,7 @@
       color: darken($primary, 10%);
     }
   }
+
   .navbar-nav {
     .nav-item {
       .nav-link {
@@ -67,6 +70,7 @@
         letter-spacing: 1px;
         color: white;
         @include heading-font;
+
         &.active,
         &:hover {
           color: $primary;
@@ -75,6 +79,7 @@
     }
   }
 }
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
@@ -84,12 +89,17 @@
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
     .navbar-brand {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
     }
+
     .navbar-nav {
       .nav-item {
         .nav-link {
@@ -97,6 +107,7 @@
         }
       }
     }
+
     &.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
@@ -104,6 +115,7 @@
       -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4);
       box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.4);
+
       .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0;
