@@ -39,6 +39,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 app.use(compression());
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'twig');
@@ -63,7 +64,7 @@ app.use(session({
   secret: process.env.SESSION_WORD,
   maxAge: parseInt(process.env.SESSION_AGE, 10),
   httpOnly: process.env.SESSION_ONLY_HTTP
-}))
+}));
 
 /**
  * Add middlewares for flash messages.
@@ -88,6 +89,7 @@ app.use(i18n({
 /**
  * Add middlewares for handle route.
  */
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
