@@ -73,7 +73,7 @@
         "grunt-webpack": "^4.0.2",
         "jquery": "^3.5.1",
         "jquery.easing": "^1.4.1",
-        "node-sass": "^5.0.0",
+        "node-sass": "^7.0.0",
         "nodemon": "^2.0.6",
         "path": "^0.12.7",
         "popper.js": "^1.16.1",
